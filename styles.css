@@ -18,6 +18,7 @@
   --mainGrey: #ececec;
   --mainSpacing: 0.1rem;
   --firstTransition: all 0.3s linear;
+  --borderRadius:5px;
 
   /* neutral colors */
   --grayishBlue:hsl(233,8%,62%);
@@ -40,14 +41,12 @@ html{
   justify-content: center;
 }
 .banner {
-  /* display: flex;
-  flex-direction: column; */
   text-align: center;
   background: rgba(255, 255, 255, 0.5);
-  /* opacity: .6; */
   display: inline-block;
   padding: 2rem;
-  transition: var(--secondTransition);
+  transition: var(--firstTransition);
+  border-radius: var(--borderRadius);
 }
 .banner:hover{
   background: transparent;
@@ -63,14 +62,16 @@ html{
 
 }
 .banner-btn {
-  padding: 1rem 3rem;
+  height:45px;
+  width:110px;
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
   font-size: 1rem;
-  background: var(--primaryLimeGreen);
+  background: var(--golden);
   color: var(--mainBlack);
   border: 1px solid var(--golden);
   transition: var(--secondTransition);
+  border-radius: var(--borderRadius);
   cursor: pointer;
 }
 .banner-btn > a{
@@ -79,9 +80,71 @@ html{
 }
 .banner-btn:hover {
   background: transparent;
-  color: var(--mainBlack);
+  color: var(--white);
 }
 .banner-btn:hover a{
-  color:var(--golden);
+color: var(--white);
 }
 /* --------------- End of Hero ---------------- */
+/* styles for about container */
+  .about-container{
+    margin:10px;
+    scroll-margin-top:60px;
+  }
+  .heading{
+    text-transform: uppercase;
+    /* box-shadow:0px 0px 50px 1px rgba(8,7,5,0.13); */
+  }
+  .about-us-text-content{
+    box-shadow:0px 0px 50px 1px rgba(8,7,5,0.13);
+  }
+/* end of about us container */
+  .activities-container{
+    margin:10px;
+    scroll-margin-top:60px;
+  }
+  .gallery-container{
+    padding:1em;
+    margin:10px;
+    scroll-margin-top:20px;
+  }
+  .gallery-heading-container{
+   margin-bottom: 10px;
+  }
+  .gallery-center{
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+  }
+  .gallery-description{
+    width:60%;
+    margin-right:30px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    box-shadow:0px 0px 50px 1px rgba(8,7,5,0.13);
+  }
+  .gallery-card{
+    height:100%;
+  }
+  .gallery-header{
+    color:var(--golden);
+    text-transform: uppercase;
+  }
+ .gallery-images-container{
+  width:100%;
+ }
+ .gallery-img{
+   width:100%;
+ }
+ #sizing-image{
+   height:500px;
+   width:500px;
+ }
+/* footer section */
+.footer-section{
+  display: flex;
+  justify-content: center;
+  scroll-margin-top:20px;
+}
+/* end of footer section */

@@ -28,8 +28,8 @@ text-transform: capitalize;
 .nav-link a{
   text-decoration:none;
   letter-spacing: var(--mainSpacing);
-  color:var(--primaryDarkBlue);
-  transition:var(--mainTransition);
+  color:var(--golden);
+  transition:var(--firstTransition);
 }
 .nav-link a:hover{
   color:var(--White);
@@ -49,11 +49,11 @@ text-transform: capitalize;
 
   }
   .line1,.line2,.line3{
-    background:var(--primaryDarkBlue);
+    background:var(--golden);
     width:30px;
     height:3px;
     margin:3px;
-    transition:var(--mainTransition);
+    transition:var(--firstTransition);
   }
   .nav-links-container{
     position: absolute;
@@ -69,7 +69,7 @@ text-transform: capitalize;
     align-items: center;
     transform:translateX(100%);
     background:transparent;
-    transition:var(--mainTransition);
+    transition:var(--firstTransition);
     justify-content: space-evenly;
     border-radius: 10px;
   }
