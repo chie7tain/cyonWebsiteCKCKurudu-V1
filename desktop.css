@@ -1,0 +1,44 @@
+/* desktop styles */
+@media only screen and (min-width:961px){
+    /* styles for navigation bar */
+.nav-bar{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  height:10vh;
+  background:var(--white);
+  margin:auto 0;
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:3;
+}
+.nav-links-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width:80%;
+  height: 10vh;
+  /* background: black; */
+}
+
+.nav-link a{
+  text-decoration:none;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  color:var(--grayishBlue);
+  transition:var(--mainTransition);
+  -moz-transition: var(--mainTransition);
+  -webkit-transition: var(--mainTransition);
+  -o-transition: var(--mainTransition);
+  letter-spacing: var(--mainSpacing);
+}
+.nav-link a:hover{
+  border-bottom: 5px solid var(--primaryLimeGreen);
+}
+/* styles for logo */
+#logo{
+    width:50px;
+  }
+}
