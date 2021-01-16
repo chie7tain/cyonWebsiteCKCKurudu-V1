@@ -10,16 +10,78 @@
   --primaryDarkBlue:hsl(233,26%,24%);
   --primaryLimeGreen:hsl(136,65%,51%);
   --primaryBrightCyan:hsl(192,70%,51%);
+
+  --primaryGold: #f09d51;
+  --golden:goldenrod;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --firstTransition: all 0.3s linear;
+
   /* neutral colors */
   --grayishBlue:hsl(233,8%,62%);
   --lightGrayishBlue:hsl(220,16%,96%);
   --veryLightGray:hsl(0,0%,98%);
   --white:hsl(0,0%,100%);
   /* addins*/
-  --mainTransition:all 0.2s ease-in;
-  --mainSpacing:0.1rem;
+  --secondTransition:all 0.2s ease-in;
 }
 /* to attain smooth scrool */
 html{
   scroll-behavior: smooth;
 }
+/* --------------- Hero ---------------- */
+.hero {
+  min-height: calc(100vh - 60px);
+  background: url("./gallery/hero-bcg.JPG") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner {
+  /* display: flex;
+  flex-direction: column; */
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  /* opacity: .6; */
+  display: inline-block;
+  padding: 2rem;
+  transition: var(--secondTransition);
+}
+.banner:hover{
+  background: transparent;
+}
+.banner:hover .banner-title{
+   color:var(--golden);
+}
+.banner-title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 3rem;
+
+}
+.banner-btn {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  background: var(--primaryLimeGreen);
+  color: var(--mainBlack);
+  border: 1px solid var(--golden);
+  transition: var(--secondTransition);
+  cursor: pointer;
+}
+.banner-btn > a{
+  text-decoration:none;
+  color: var(--white);
+}
+.banner-btn:hover {
+  background: transparent;
+  color: var(--mainBlack);
+}
+.banner-btn:hover a{
+  color:var(--golden);
+}
+/* --------------- End of Hero ---------------- */
