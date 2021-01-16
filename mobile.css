@@ -11,11 +11,12 @@
     height:60px;
     display:flex;
     justify-content: space-between;
-    /* padding:0 1%; */
     align-items:center;
     z-index:3;
     background:var(--white);
-    transition: var(--mainTransition);
+    opacity: .9;
+    /* background: var(--primaryDarkBlue); */
+    transition: var(--secondTransition);
   }
   #logo{
     width:50px;
@@ -28,8 +29,8 @@
   .nav-link a{
     text-decoration:none;
     letter-spacing: var(--mainSpacing);
-    color:var(--primaryDarkBlue);
-    transition:var(--mainTransition);
+    color:var(--mainWhite);
+    transition:var(--secondTransition);
   }
   .nav-link a:hover{
     color:var(--White);
@@ -49,27 +50,27 @@
 
     }
     .line1,.line2,.line3{
-      background:var(--primaryDarkBlue);
+      background:var(--golden);
       width:30px;
       height:3px;
       margin:3px;
-      transition:var(--mainTransition);
+      transition:var(--secondTransition);
     }
     .nav-links-container{
       position: absolute;
       right:0px;
       left:0px;
-      top:15vh;
+      top:20vh;
       width:80%;
       margin:auto;
-      height:85vh;
+      /* height:85vh; */
       height: 70vh;
       display:flex;
       flex-direction:column;
       align-items: center;
-      transform:translateX(100%);
-      background:transparent;
-      transition:var(--mainTransition);
+      transform:translateX(120%);
+      background:var(--mainWhite);
+      transition:var(--secondTransition);
       justify-content: space-evenly;
       border-radius: 10px;
     }
@@ -79,7 +80,7 @@
     .nav-active{
       transform:translateX(0%);
       max-width:calc(100% - 40px);
-      background:var(--white);
+      background:var(--golden);
     }
     @keyframes navLinkFade{
       from{
@@ -102,4 +103,128 @@
     }
 
     /* end of responsive nav bar styles */
+
+    /* --------------- Hero ---------------- */
+.hero {
+  min-height: calc(100vh - 60px);
+  background: url("./gallery/hero-bcg.JPG") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  background: transparent;
+  display: inline-block;
+  padding: 2rem;
+  transition: var(--firstTransition);
+  border-radius: var(--borderRadius);
+}
+
+.banner:hover .banner-title{
+   color:var(--golden);
+}
+.banner-title {
+  font-size: 1rem;
+  color:var(--golden);
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  /* margin-bottom: 3rem; */
+  background: var(--mainWhite);
+  height:25px;
+  /* opacity: .5; */
+}
+.banner-btn {
+  height:40px;
+  /* width:10px; */
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: .8rem;
+  background: var(--golden);
+  color: var(--mainBlack);
+  border: 1px solid var(--golden);
+  transition: var(--secondTransition);
+  border-radius: var(--borderRadius);
+  cursor: pointer;
+}
+.banner-btn > a{
+  text-decoration:none;
+  color: var(--white);
+}
+.banner-btn:hover {
+  background: transparent;
+  color: var(--white);
+}
+.banner-btn:hover a{
+color: var(--white);
+}
+/* --------------- End of Hero ---------------- */
+    /* styles for about container */
+  .about-container{
+    margin:10px;
+    scroll-margin-top:60px;
+  }
+  .heading{
+    text-transform: uppercase;
+    font-size:.9em;
+    /* box-shadow:0px 0px 50px 1px rgba(8,7,5,0.13); */
+  }
+  .about-us-text-content{
+    box-shadow:0px 0px 50px 1px rgba(8,7,5,0.13);
+  }
+/* end of about us container */
+  .activities-container{
+    margin:10px;
+    scroll-margin-top:60px;
+  }
+  .gallery-container{
+    padding:1em;
+    margin:10px;
+    scroll-margin-top:20px;
+  }
+  .gallery-heading-container{
+   margin-bottom: 10px;
+  }
+  .gallery-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+  }
+  .gallery-description{
+    width:60%;
+    margin-right:30px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    box-shadow:0px 0px 50px 1px rgba(8,7,5,0.13);
+  }
+  .description-text{
+    font-size:.8em;
+  }
+  .gallery-card{
+    height:100%;
+  }
+  .gallery-header{
+    color:var(--golden);
+    text-transform: uppercase;
+  }
+ .gallery-images-container{
+  width:100%;
+ }
+ .gallery-img{
+   width:100%;
+ }
+ #sizing-image{
+   height:500px;
+   width:500px;
+ }
+/* footer section */
+.footer-section{
+  display: flex;
+  justify-content: center;
+  scroll-margin-top:20px;
+}
+/* end of footer section */
 }
